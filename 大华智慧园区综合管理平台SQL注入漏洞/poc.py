@@ -59,7 +59,7 @@ def main():
             for url in f.readlines():
                 url_list.append(url.strip().replace("\n", ""))
 
-        mp = Pool(10)  # 创建一个拥有20个线程的线程池
+        mp = Pool(20)  # 创建一个拥有20个线程的线程池
         mp.map(poc, url_list)
         mp.close()
         mp.join()
